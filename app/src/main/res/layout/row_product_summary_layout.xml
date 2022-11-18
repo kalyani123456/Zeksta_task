@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="8dp"
+    app:cardCornerRadius="12dp"
+    android:elevation="3dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_flag"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_launcher_background"
+            android:visibility="visible"
+            app:civ_border_color="@color/teal_700"
+            app:civ_border_width="1dp" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@+id/iv_flag"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensans"
+            android:hint="Product name"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvProductName"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@+id/iv_flag"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensans"
+            android:maxLines="1"
+            android:textSize="@dimen/_12sp"
+            android:text="Qty : " />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvQtyValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvProductName"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/tvQty"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensans"
+            android:hint="0"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvProductName"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@+id/tvPriceValue"
+            android:ellipsize="end"
+            android:textSize="@dimen/_12sp"
+            android:fontFamily="@font/opensans"
+            android:maxLines="1"
+            android:text="Price : " />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPriceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvProductName"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="5dp"
+            android:ellipsize="end"
+            android:textSize="@dimen/_12sp"
+            android:fontFamily="@font/opensans"
+            android:hint="$0.0"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSelectedColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvQty"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@+id/iv_flag"
+            android:ellipsize="end"
+            android:textSize="@dimen/_12sp"
+            android:fontFamily="@font/opensans"
+            android:maxLines="1"
+            android:text="Selected Color : " />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSelectedColorValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvQty"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/tvSelectedColor"
+            android:ellipsize="end"
+            android:textSize="@dimen/_12sp"
+            android:fontFamily="@font/opensans"
+            android:hint="Unavailable"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSelectedBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSelectedColor"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@+id/iv_flag"
+            android:ellipsize="end"
+            android:textSize="@dimen/_12sp"
+            android:fontFamily="@font/opensans"
+            android:maxLines="1"
+            android:text="Selected Brand : " />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSelectedBrandValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSelectedColor"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/tvSelectedBrand"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensans"
+            android:hint="Unavailable"
+            android:maxLines="1"
+            android:textSize="@dimen/_12sp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTotalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSelectedBrand"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@+id/iv_flag"
+            android:ellipsize="end"
+            android:textSize="@dimen/_12sp"
+            android:fontFamily="@font/opensans"
+            android:maxLines="1"
+            android:text="Total Price : " />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTotalPriceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSelectedBrand"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/tvTotalPrice"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensans"
+            android:hint="Unavailable"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

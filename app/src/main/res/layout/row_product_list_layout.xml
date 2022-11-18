@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="8dp"
+    app:cardCornerRadius="12dp"
+    android:elevation="3dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_flag"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_launcher_background"
+            android:visibility="visible"
+            app:civ_border_color="@color/teal_700"
+            app:civ_border_width="1dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@+id/iv_flag"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensans"
+            android:hint="Product name"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvProductName"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@+id/iv_flag"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensans"
+            android:maxLines="1"
+            android:text="Price :" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPriceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvProductName"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/tvPrice"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensans"
+            android:hint="$0.0"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioColor1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPriceValue"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_flag"
+            android:layout_marginTop="3dp"
+            android:checked="false" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvColor1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPrice"
+            android:layout_toRightOf="@+id/radioColor1"
+            android:fontFamily="@font/opensans"
+            android:text="NA"
+            android:layout_marginTop="8dp"
+            android:textSize="@dimen/_12sp" />
+
+        <RadioButton
+            android:id="@+id/radioColor2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPrice"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tvColor1"
+            android:checked="false" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvColor2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPrice"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/radioColor2"
+            android:fontFamily="@font/opensans"
+            android:text="NA"
+            android:textSize="@dimen/_12sp" />
+
+        <RadioButton
+            android:id="@+id/radioColor3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPrice"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tvColor2"
+            android:checked="false" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvColor3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans"
+            android:text="NA"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_vertical"
+            android:layout_below="@id/tvPrice"
+            android:layout_toRightOf="@+id/radioColor3"
+            android:textSize="@dimen/_12sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_textName"
+            android:layout_below="@id/radioColor1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_6dp"
+            app:boxCornerRadiusBottomEnd="@dimen/_10dp"
+            app:boxCornerRadiusBottomStart="@dimen/_10dp"
+            app:boxCornerRadiusTopEnd="@dimen/_10dp"
+            app:boxCornerRadiusTopStart="@dimen/_10dp"
+            app:hintEnabled="false"
+            android:layout_toRightOf="@+id/iv_flag"
+            app:startIconContentDescription="$">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/AutoComBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/toggle_add_reminder_edt"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/opensans"
+                android:hint="Select Brand"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:padding="@dimen/_10dp"
+                android:textSize="@dimen/_14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_textWeight"
+            android:layout_below="@id/input_textName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_6dp"
+            app:boxCornerRadiusBottomEnd="@dimen/_10dp"
+            app:boxCornerRadiusBottomStart="@dimen/_10dp"
+            app:boxCornerRadiusTopEnd="@dimen/_10dp"
+            app:boxCornerRadiusTopStart="@dimen/_10dp"
+            app:hintEnabled="false"
+            app:endIconDrawable="@android:color/transparent"
+            android:layout_toRightOf="@+id/iv_flag"
+            app:startIconContentDescription="$">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/AutoComWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/toggle_add_reminder_edt"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/opensans"
+                android:hint="Enter Qty"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:padding="@dimen/_10dp"
+                android:textSize="@dimen/_14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
